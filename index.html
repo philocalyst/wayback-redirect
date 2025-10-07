@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Open in Wayback</title>
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script>
+    (function () {
+      // If referred from another page, use document.referrer
+      // Otherwise, allow ?u=<url> as a fallback
+      const u =
+        document.referrer ||
+        new URLSearchParams(location.search).get("u") ||
+        "";
+      if (u) {
+        location.replace(
+          "https://web.archive.org/web/2/" + encodeURIComponent(u)
+        );
+      } else {
+        location.replace(
+          "https://web.archive.org/"
+        );
+      }
+    })();
+  </script>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      margin: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <p>
+    Redirecting to Wayback...
+    <noscript>Enable JavaScript or append ?u= to the URL.</noscript>
+  </p>
+</body>
+
+</html>
